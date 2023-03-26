@@ -1,0 +1,196 @@
+
+<div class=" content">
+  <div class=" row">
+    <div class=" col-12">
+      <div class=" card card-chart">
+        <div class=" card-header">
+          <div class=" row">
+            <div class=" col-sm-6 text-left">
+              <h5 class=" card-category">M&eacute;dia Anual</h5>
+              <h2 class=" card-title">Crises</h2>
+            </div>
+            <div class=" col-sm-6">
+              <div
+                class=" btn-group btn-group-toggle float-right"
+                data-toggle="buttons"
+              >
+                <label class=" btn btn-sm btn-danger btn-simple" (click)="data=datasets[0];updateOptions();clicked=true;clicked1=false;clicked2=false" [ngClass]="{'active':clicked===true}">
+                  <input checked="checked" name="options" type="radio" />
+
+                  <span
+                    class=" d-none d-sm-block d-md-block d-lg-block d-xl-block"
+                  >
+                    Depress&atilde;o
+                  </span>
+                  <span class=" d-block d-sm-none">
+                    <i class=" tim-icons icon-single-02"> </i>
+                  </span>
+                </label>
+                <label class=" btn btn-sm btn-danger btn-simple" (click)="data=datasets[1];updateOptions();clicked=false;clicked1=true;clicked2=false" [ngClass]="{'active':clicked1===true}">
+                  <input
+                    class=" d-none d-sm-none"
+                    name="options"
+                    type="radio"
+                  />
+
+                  <span
+                    class=" d-none d-sm-block d-md-block d-lg-block d-xl-block"
+                  >
+                    Ansiedade
+                  </span>
+                  <span class=" d-block d-sm-none">
+                    <i class=" tim-icons icon-gift-2"> </i>
+                  </span>
+                </label>
+                <label class=" btn btn-sm btn-danger btn-simple" (click)="data=datasets[2];updateOptions();clicked=false;clicked1=false;clicked2=true" [ngClass]="{'active':clicked2===true}">
+                  <input class=" d-none" name="options" type="radio" />
+
+                  <span
+                    class=" d-none d-sm-block d-md-block d-lg-block d-xl-block"
+                  >
+                    Bipolaridade
+                  </span>
+                  <span class=" d-block d-sm-none">
+                    <i class=" tim-icons icon-tap-02"> </i>
+                  </span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class=" card-body">
+          <div class=" chart-area"><canvas id="chartBig1"> </canvas></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=" row">
+    <div class=" col-lg-4">
+      <div class=" card card-chart">
+        <div class=" card-header">
+          <h5 class=" card-category">Notifica&ccedil;&atilde;oes Recebidas</h5>
+          <h3 class=" card-title">
+            <i class=" tim-icons icon-bell-55 text-danger-states"> </i> 1,350
+          </h3>
+        </div>
+        <div class=" card-body">
+          <div class=" chart-area"><canvas id="chartLineRed"> </canvas></div>
+        </div>
+      </div>
+    </div>
+    <div class=" col-lg-4">
+      <div class=" card card-chart">
+        <div class=" card-header">
+          <h5 class=" card-category">Total de Casos por Estados</h5>
+          <h3 class=" card-title">
+            <i class=" tim-icons icon-chart-bar-32 text-info"> </i> 445
+          </h3>
+        </div>
+        <div class=" card-body">
+          <div class=" chart-area"><canvas id="CountryChart"> </canvas></div>
+        </div>
+      </div>
+    </div>
+    <div class=" col-lg-4">
+      <div class=" card card-chart">
+        <div class=" card-header">
+          <h5 class=" card-category">Total Mensagens via WhatsApp</h5>
+          <h3 class=" card-title">
+            <i class=" tim-icons icon-send text-success"> </i> 9,500
+          </h3>
+        </div>
+        <div class=" card-body">
+          <div class=" chart-area"><canvas id="chartLineGreen"> </canvas></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=" row">        
+    <div class=" col-12">
+      <div class=" card">
+        <div class=" card-header">
+          <h4 class=" card-title"><i class="tim-icons icon-trophy text-warning"></i>  Ranking dos Profissionais</h4>
+        </div>
+        <div class=" card-body">
+          <div class=" table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th class="text-center">#</th>
+                  <th>Nome</th>
+                  <th>Cargo</th>
+                  <th>Ano</th>                  
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-center">1</td>
+                  <td>Maria Vasconcellos Vargas</td>
+                  <td>Piscóloga</td>
+                  <td>2022</td>
+                </tr>
+                <tr>
+                  <td class="text-center">2</td>
+                  <td>Júlia Abuquerque Oliveira</td>
+                  <td>Piscóloga</td>
+                  <td>2022</td>                  
+                </tr>
+                <tr>
+                  <td class="text-center">3</td>
+                  <td>Adenir Rodrigues Pereira Oliveira</td>
+                  <td>Piscóloga</td>
+                  <td>2022</td>                  
+                </tr>
+                <tr>
+                  <td class="text-center">4</td>
+                  <td>Andrew Mike</td>
+                  <td>Piscólogo</td>
+                  <td>2022</td>
+                </tr>
+                <tr>
+                  <td class="text-center">5</td>
+                  <td>John Doe</td>
+                  <td>Piscólogo</td>
+                  <td>2022</td>                  
+                </tr>
+                <tr>
+                  <td class="text-center">6</td>
+                  <td>Alex Telhes</td>
+                  <td>Piscólogo</td>
+                  <td>2022</td>                  
+                </tr>
+                <tr>
+                  <td class="text-center">7</td>
+                  <td>André Martins</td>
+                  <td>Piscólogo</td>
+                  <td>2022</td>
+                </tr>
+                <tr>
+                  <td class="text-center">8</td>
+                  <td>João Marcelo</td>
+                  <td>Piscólogo</td>
+                  <td>2022</td>                  
+                </tr>
+                <tr>
+                  <td class="text-center">9</td>
+                  <td>Danielle Silva</td>
+                  <td>Piscóloga</td>
+                  <td>2022</td>                  
+                </tr>
+                <tr>
+                  <td class="text-center">10</td>
+                  <td>Emerson Silva</td>
+                  <td>Piscólogo</td>
+                  <td>2022</td>                  
+                </tr>                
+              </tbody>
+            </table>
+          </div>
+        </div>
+        </div>
+      </div>          
+
+    </div>
+  </div>
+
+  
